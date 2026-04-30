@@ -9,6 +9,7 @@ else
    echo "$PACKAGE1 is not installed. installing.."
    apt update
    apt install nginx -y
+fi
 if dpkg -s $PACKAGE2 &> /dev/null
 then
    echo "$PACKAGE2 is already installed"
