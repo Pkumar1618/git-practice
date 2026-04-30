@@ -33,17 +33,17 @@ then
    echo "$PACKAGE2 is already installed"
 else
    echo "$PACKAGE2 is not installed. installing.."
-   apt update
+   apt update; apt install mysql
    apt install mysql-server -y
 fi
 
 
-   echo "check mysql-server service status..."
-if systemctl is-active --quiet mysql-server;
+   echo "check mysql service status. it running or not.."
+if systemctl status mysql;
 then
-   echo "mysql-server is already running"
+   echo "mysql is already running"
 else
 
-   echo "mysql-server is not running. starting mysql-server.."
-   systemctl start mysql-server
+   echo "mysql is not running starting mysql-server.."
+   systemctl start mysql
 fi
