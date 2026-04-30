@@ -9,14 +9,13 @@ then
    exit 1
 fi
 
-apt list installed nginx
+    dnf list installed nginx
 
 if [ $? -ne 0 ]
 then
    echo "nginx is not installed, going to install it.."
-   apt update
 
-   apt install -a nginx -y
+   dnf install -a nginx -y
 if [ $? -ne 0 ]
 then
    echo "nginx installation is not suucees... check it"
