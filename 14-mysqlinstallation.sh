@@ -1,0 +1,18 @@
+PACKAGE1="nginx"
+PACKAGE2="mysql"
+if dpkg -s $PACKAGE1 &> /dev/null;
+then
+   echo "$PACKAGE1 is already installed"
+   
+else
+   echo "$PACKAGE1 is not installed. installing.."
+   apt update
+   apt install nginx -y
+if dpkg -s $PACKAGE2 &> /dev/null
+then
+   echo "$PACKAGE2 is already installed"
+else
+   echo "$PACKAGE2 is not installed. installing.."
+   apt update
+   apt install mysql -y
+fi
