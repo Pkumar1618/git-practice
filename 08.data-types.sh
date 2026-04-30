@@ -5,4 +5,4 @@ NUMBER=$2
 
 SUM=(($NUMBER1+$NUMBER2))
 
-echo "sum of total $number1 and $number2 is: $SUM"
+echo "sum of total $NUMBER1 and $NUMBER2 is: $SUM"
