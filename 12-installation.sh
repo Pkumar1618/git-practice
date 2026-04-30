@@ -13,10 +13,17 @@ apt list installed nginx
 
 if [ $? -ne 0 ]
 then
-   echo "nginx is allready installed, going to install it.."
+   echo "nginx is not installed, going to install it.."
    apt update
 
    apt install nginx -y
+if [ $? -ne 0 ]
+then
+   echo "nginx installation is not suucees... check it"
+   exit 1
+else
+    echo "nginx istallation is success"
+fi
 
 else
     echo "nginx is already installed, nothing do it.."
