@@ -16,7 +16,7 @@ else
    apt install nginx -y
 fi
    echo "check nginx status check. it is running or not."
-if systemctl is-active --quit nginx;
+if systemctl status nginx;
 then
    echo "nginx is already running.."
 else
