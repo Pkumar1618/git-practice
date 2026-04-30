@@ -1,3 +1,4 @@
+#!/bin/bash
 PACKAGE1="nginx"
 PACKAGE2="mysql"
 if dpkg -s $PACKAGE1 &> /dev/null;
